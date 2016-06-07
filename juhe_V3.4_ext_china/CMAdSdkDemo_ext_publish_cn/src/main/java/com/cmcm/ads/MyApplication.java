@@ -30,7 +30,7 @@ public class MyApplication extends Application {
        CMAdManagerFactory.setImageDownloadListener(new MyImageLoadListener());
 
         //if you want to print debug log ,set it
-      CMAdManager.enableLog();
+      //CMAdManager.enableLog();
     }
 
 
