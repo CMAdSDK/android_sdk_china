@@ -26,7 +26,7 @@ public class MyApplication extends Application {
         //The third parameter：product channel id（can be null）
         CMAdManager.applicationInit(this, "1096", "");
 
-        //it is strongly recommended that custom imageload for interstitial
+        // Image loader must setted  if you integrate interstitial Ads in your App.
        CMAdManagerFactory.setImageDownloadListener(new MyImageLoadListener());
 
         //if you want to print debug log ,set it
@@ -35,7 +35,7 @@ public class MyApplication extends Application {
 
 
     /**
-     * it is strongly recommended that custom imageLoad to handle image
+     *  Image loader must setted  if you integrate interstitial Ads in your App.
      */
     class MyImageLoadListener implements ImageDownloadListener {
 
@@ -47,6 +47,7 @@ public class MyApplication extends Application {
                 }
                 return;
             }
+            //You can use your own VolleyUtil for image loader
             VolleyUtil.loadImage(url, new ImageLoader.ImageListener() {
                 @Override
                 public void onErrorResponse(VolleyError volleyError) {
