@@ -55,9 +55,8 @@
 }
 
 #for baidu
--keep class com.baidu.mobad.feeds.** {
-public *;
-
+-keep class com.baidu.** {
+    public protected *;
 }
 
 #for picks download

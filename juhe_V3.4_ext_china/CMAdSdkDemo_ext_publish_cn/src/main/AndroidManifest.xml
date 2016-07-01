@@ -85,10 +85,11 @@
             </intent-filter>
         </receiver>
         <!--  接入Baidu必需：将下一行的android:value设置为您在百度union网站申请的AppSid-->
-        <meta-data  android:name="BaiduMobAd_APP_ID" android:value="e866cfb0" />
+        <meta-data  android:name="BaiduMobAd_APP_ID" android:value="ec65005f" />
         <activity
-            android:name="com.baidu.mobad.feeds.BaiduActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation" />
+            android:name="com.baidu.mobads.AppActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"	/>
 
         <!-- 接入腾讯gdt必需 -->
         <service android:name="com.qq.e.comm.DownloadService" android:exported="false" />
